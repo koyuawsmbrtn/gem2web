@@ -1,7 +1,7 @@
 #!/bin/python3
 import ignition
 from markdown import markdown
-from bottle import * # pylint: disable=unused-wildcard-import
+from bottle import route, static_file, response, run
 
 rooturl = "//koyu.space/web/"
 
