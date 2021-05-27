@@ -5,6 +5,14 @@ from bottle import * # pylint: disable=unused-wildcard-import
 
 rooturl = "//koyu.space/web/"
 
+@route("/style.css")
+def style():
+    return static_file("style.css", root=".")
+
+@route("/favicon.ico")
+def favicon():
+    return static_file("favicon.ico", root=".")
+
 @route("/")
 def index():
     rep = str(ignition.request(rooturl))
