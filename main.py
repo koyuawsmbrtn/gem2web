@@ -47,6 +47,7 @@ def index():
 @route("/<url:re:.+>")
 def defr(url):
     req = ignition.request(rooturl+url)
+    print(url)
     try:
         rep = str(req.data())
         mime = str(req).split("\n")[0].split(" ")[1].split(";")[0]
