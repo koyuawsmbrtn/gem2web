@@ -2,8 +2,11 @@
 import ignition
 from markdown import markdown
 from bottle import route, static_file, response, run
+import os.path
 
 rooturl = "//koyu.space/web/"
+if os.path.exists(".local"):
+    rooturl = "//localhost/web/"
 
 @route("/style.css")
 def style():
@@ -16,7 +19,6 @@ def favicon():
 @route("/")
 def index():
     rep = str(ignition.request(rooturl))
-    print(rep)
     body = "\n".join(rep.split("\n")[1:])
     lines = body.split("\n")
     parsedmd = ""
