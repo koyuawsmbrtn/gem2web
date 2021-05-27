@@ -16,6 +16,7 @@ $(document).ready(function() {
   }
   $("body").html(twemoji.parse($("body").html()));
   $("body").html($("body").html().replaceAll("href=\"https://", "target=\"_blank\" href=\"https://"));
+  $("body").html($("body").html().replaceAll("<p>Posted on ", "<p class=\"published\">Posted on "));
 });
 </script>
 </head>
