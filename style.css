@@ -1,0 +1,45 @@
+body {
+  background: #eee;
+  color: #000;
+  font-family: monospace;
+  padding: 10px;
+  padding-top: 20px !important;
+}
+
+a, a:visited {
+  color: #000;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #000;
+    color: #00ff00;
+  }
+
+  a, a:visited {
+    color: #00ff00;
+  }
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.emoji {
+  width: 16px !important;
+  height: 16px !important;
+  vertical-align: middle !important;
+}
+
+code > p {
+  margin: 0;
+}
+
+@media(min-width:800px) {
+  body {
+    width: 40%;
+    position: relative;
+    margin: 0 auto;
+  }
+}
