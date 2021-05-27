@@ -36,6 +36,11 @@ code > p {
   margin: 0;
 }
 
+h2 {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
 @media(min-width:800px) {
   body {
     width: 40%;
