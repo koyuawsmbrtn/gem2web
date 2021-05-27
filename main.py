@@ -18,8 +18,9 @@ def favicon():
 
 @route("/")
 def index():
-    rep = str(ignition.request(rooturl))
-    body = "\n".join(rep.split("\n")[1:])
+    req = ignition.request(rooturl)
+    rep = str(req.data())
+    body = rep
     lines = body.split("\n")
     parsedmd = ""
     for e in lines:
