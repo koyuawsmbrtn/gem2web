@@ -79,7 +79,7 @@ def defr(url):
         htmlines = parsedhtml.split("\n")
         html = ""
         for eh in htmlines:
-            if not "code>" in eh and not "<h" in eh and not "</h" in eh and not "ul>" in eh and not "li>" in eh:
+            if not "code>" in eh and not "<h" in eh and not "</h" in eh and not "ul>" in eh and not "ol>" in eh and not "li>" in eh:
                 html += "<p>"+eh+"</p>\n"
             else:
                 html += eh+"\n"
