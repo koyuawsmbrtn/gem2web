@@ -8,4 +8,4 @@ Install Python3 alongside PIP and run the following command to install the depen
 
 `sudo pip3 install -r requirements.txt`
 
-Afterwards run `main.py` and open up `localhost:1968` or use an nginx reverse proxy for public serving.
+Afterwards run `main.py` and open up `localhost:1968` or use a nginx reverse proxy for public serving.
