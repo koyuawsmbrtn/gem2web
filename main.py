@@ -18,6 +18,7 @@ def favicon():
 
 @route("/")
 def index():
+    response.headers['Access-Control-Allow-Origin'] = '*'
     req = ignition.request(rooturl)
     rep = str(req.data())
     body = rep
@@ -50,6 +51,7 @@ def index():
 
 @route("/<url:re:.+>")
 def defr(url):
+    response.headers['Access-Control-Allow-Origin'] = '*'
     req = ignition.request(rooturl+url)
     try:
         rep = str(req.data())
