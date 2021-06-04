@@ -66,6 +66,8 @@ def defr(url):
             mime = "audio/ogg"
         if "mp3" in str(req.url):
             mime = "audio/mpeg"
+        if "ods" in str(req.url):
+            mime = "application/vnd.oasis.opendocument.spreadsheet"
     if mime == "text/gemini":
         body = rep
         lines = body.split("\n")
