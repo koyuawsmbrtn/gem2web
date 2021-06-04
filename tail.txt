@@ -1,6 +1,6 @@
 </div>
 <div id="widgets">
-<div id="toc"></div>
+<div id="menu"></div>
 </div>
 <br>
 <footer>

@@ -27,23 +27,23 @@ $(document).ready(function() {
     $("body").html($("body").html().replaceAll("<p>Posted on ", "<p class=\"published\">Posted on "));
     //Table of Contents
     //Taken from https://medium.com/codefile/an-automatic-table-of-contents-generator-in-javascript-3f56220c9397
-    toc = document.getElementById("toc");
-    tocHeader = document.createElement("h1");
-    tocHeader.innerText="Table of Contents";
-    var tocList = document.createElement("ul");
-    toc.appendChild(tocHeader);
+    menu = document.getElementById("menu");
+    menuHeader = document.createElement("h1");
+    menuHeader.innerText="Menu";
+    var menuList = document.createElement("ul");
+    menu.appendChild(menuHeader);
     var headers = document.getElementsByTagName("h2");
     for (i = 0; i < headers.length; i++){
         var name = "h"+i;
         headers[i].id=name;
-        tocListItem = document.createElement("li");
-        var tocEntry = document.createElement("a");
-        tocEntry.setAttribute("href","#"+name);
-        tocEntry.innerText=headers[i].innerText;
-        tocListItem.appendChild(tocEntry);
-        tocList.appendChild(tocListItem);
+        menuListItem = document.createElement("li");
+        var menuEntry = document.createElement("a");
+        menuEntry.setAttribute("href","#"+name);
+        menuEntry.innerText=headers[i].innerText;
+        menuListItem.appendChild(menuEntry);
+        menuList.appendChild(menuListItem);
     }
-    toc.appendChild(tocList);
+    menu.appendChild(menuList);
     //Widgets logic
     if (headers.length > 0) {
         widgetcount = 1;
@@ -51,7 +51,7 @@ $(document).ready(function() {
     if (widgetcount === 0) {
         $("#widgets").hide();
     }
-    //Scroll to page after ToC has been loaded
+    //Scroll to page after menu has been loaded
     window.setTimeout(function() {
         try {
             document.getElementById(location.href.split("#")[1]).scrollIntoView();
