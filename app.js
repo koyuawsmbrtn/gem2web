@@ -11,7 +11,8 @@ $(document).ready(function() {
     $("body").html($("body").html().replaceAll("href=\"https://", "target=\"_blank\" href=\"https://"));
     //Display inline-images
     $('a[href*=".jpg"]').each(function() {
-        $(this).html("<img src=\""+$(this).attr("href")+"\" width=\"300\">")
+        $(this).html("<img src=\""+$(this).attr("href")+"\" width=\"300\">");
+        $(this).attr("target", "_blank");
     });
     $('a[href*=".png"]').each(function() {
         var width = "300";
@@ -19,7 +20,8 @@ $(document).ready(function() {
         if ($(this).attr("href") === "me.png") {
             width = 200;
         }
-        $(this).html("<img src=\""+$(this).attr("href")+"\" width=\""+width+"\" alt=\""+$(this).html()+"\" title=\""+$(this).html()+"\">")
+        $(this).html("<img src=\""+$(this).attr("href")+"\" width=\""+width+"\" alt=\""+$(this).html()+"\" title=\""+$(this).html()+"\">");
+        $(this).attr("target", "_blank");
     });
     //Article metadata below article title
     $("body").html($("body").html().replaceAll("<p>Posted on ", "<p class=\"published\">Posted on "));
