@@ -1,3 +1,7 @@
+</div>
+<div id="widgets">
+<div id="toc"></div>
+</div>
 <br>
 <footer>
 <p>Also available on Gemini at <a href="gemini://koyu.space/web">gemini://koyu.space/web</a></p>

@@ -16,6 +16,14 @@ def style():
 def favicon():
     return static_file("favicon.ico", root=".")
 
+@route("/app.js")
+def appjs():
+    return static_file("app.js", root=".")
+
+@route("/koyu.png")
+def koyupng():
+    return static_file("koyu.png", root=".")
+
 @route("/")
 def index():
     response.headers['Access-Control-Allow-Origin'] = '*'

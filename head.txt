@@ -9,15 +9,7 @@
 <title>koyu's personal website</title>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="https://twemoji.maxcdn.com/v/13.0.2/twemoji.min.js" integrity="sha384-wyB/MspSJ/r2bT2kCj44qtsYRYlpzO2oAPhRj5myrWD63dt6qWv4x8AZe7Fl3K3b" crossorigin="anonymous"></script>
-<script>
-$(document).ready(function() {
-  if (location.href.includes(".gmi") && !location.href.includes("index.gmi")) {
-    $("body").prepend("<p><a href=\"/\">&larr; Back to front page</a><p><br>");
-  }
-  $("body").html(twemoji.parse($("body").html()));
-  $("body").html($("body").html().replaceAll("href=\"https://", "target=\"_blank\" href=\"https://"));
-  $("body").html($("body").html().replaceAll("<p>Posted on ", "<p class=\"published\">Posted on "));
-});
-</script>
+<script src="/app.js"></script>
 </head>
 <body>
+<div id="content">
