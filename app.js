@@ -3,7 +3,7 @@ $(document).ready(function() {
     var widgetcount = 0;
     // Back link
     if (location.href.includes(".gmi") && !location.href.includes("index.gmi")) {
-        $("body").prepend("<p id=\"backlink\"><a href=\"/\">&larr; Back to front page</a><p><br>");
+        $("body").prepend("<p id=\"backlink\"><a href=\"javascript:history.back();\">&larr; Back to front page</a><p><br>");
     }
     //Parse Twemoji
     $("body").html(twemoji.parse($("body").html()));
