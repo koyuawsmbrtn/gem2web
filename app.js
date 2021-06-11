@@ -25,6 +25,11 @@ $(document).ready(function() {
     });
     //Article metadata below article title
     $("body").html($("body").html().replaceAll("<p>Posted on ", "<p class=\"published\">Posted on "));
+    //Page title
+    var title = $("h1").html();
+    if (location.href.includes(".gmi")) {
+        document.title = title+" – "+document.title;
+    }
     //Table of Contents
     //Taken from https://medium.com/codefile/an-automatic-table-of-contents-generator-in-javascript-3f56220c9397
     menu = document.getElementById("menu");
